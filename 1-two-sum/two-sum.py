@@ -10,3 +10,4 @@ class Solution:
                 return [seen[needed], i]
             else:
                 seen[current] = i
+        return 1
