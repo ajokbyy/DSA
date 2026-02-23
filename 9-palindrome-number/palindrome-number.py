@@ -4,8 +4,15 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        x = str(x)
-        return  x == x[::-1]
+        if x < 0:
+            return False # negative
 
-        
+        original = x
+        rev = 0
+        while x > 0:
+            digit = x % 10
+            rev = rev * 10 + digit
+            x//= 10
+        return original == rev
+
         
